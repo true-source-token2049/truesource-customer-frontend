@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@config '../../talwind.config.ts';
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,7 +118,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.nextjs-portal,
+[data-nextjs-dialog-overlay] {
+  display: none !important;
 }
