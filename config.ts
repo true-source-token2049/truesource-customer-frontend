@@ -7,7 +7,6 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       NEXT_PUBLIC_ALCHEMY_API_KEY: string;
-      NEXT_PUBLIC_ALCHEMY_GAS_POLICY_ID: string;
     }
   }
 }
@@ -17,11 +16,10 @@ export const config = createConfig(
     transport: alchemy({
       apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
     }),
-    chain: sepolia, // Changed to Ethereum Sepolia testnet
+    chain: sepolia,
     ssr: true,
     storage: cookieStorage,
     enablePopupOauth: true,
-    policyId: process.env.NEXT_PUBLIC_ALCHEMY_POLICY_ID,
   },
   {
     auth: {

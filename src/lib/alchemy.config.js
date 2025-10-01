@@ -1,6 +1,5 @@
-import { AlchemyAccountsUIConfig, createConfig } from "@account-kit/react";
-import { sepolia, mainnet } from "@account-kit/infra";
-import { alchemy } from "@account-kit/infra";
+import { createConfig } from "@account-kit/react";
+import { sepolia, alchemy } from "@account-kit/infra";
 
 const uiConfig = {
   illustrationStyle: "outline",
@@ -19,7 +18,9 @@ const uiConfig = {
 
 export const config = createConfig(
   {
-    apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
+    transport: alchemy({
+      apiKey: process.env.NEXT_PUBLIC_ALCHEMY_API_KEY,
+    }),
     chain: sepolia,
     ssr: true,
   },

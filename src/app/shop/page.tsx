@@ -5,7 +5,7 @@ import { getAllProducts, Product } from "@/lib/api";
 import { NavBar } from "@/components/NavBar";
 import { ProductCard } from "@/components/ProductCard";
 
-export default function Home() {
+export default function ShopPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -54,7 +54,7 @@ export default function Home() {
 
         {!loading && !error && (
           <>
-            {products.length === 0 ? (
+            {products?.length === 0 ? (
               <div className="text-center py-20">
                 <p className="text-gray-500 text-lg">No products available</p>
               </div>

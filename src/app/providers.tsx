@@ -6,6 +6,7 @@ import {
 } from "@account-kit/react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { PropsWithChildren } from "react";
+import { CartProvider } from "@/contexts/CartContext";
 
 export const Providers = (
   props: PropsWithChildren<{
@@ -19,7 +20,7 @@ export const Providers = (
         queryClient={queryClient}
         initialState={props.initialState}
       >
-        {props.children}
+        <CartProvider>{props.children}</CartProvider>
       </AlchemyAccountProvider>
     </QueryClientProvider>
   );
