@@ -30,7 +30,7 @@ export const NavBar = () => {
   return (
     <>
       <nav className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 items-center justify-between px-4">
+        <div className="container flex h-16 items-center justify-between px-4 mx-auto">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-gray-900">TruSrc</span>
@@ -62,7 +62,10 @@ export const NavBar = () => {
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
             {/* Profile Icon */}
-            <Link href="/profile" className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <Link
+              href="/profile"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
               <User className="h-6 w-6 text-gray-700" />
             </Link>
 
