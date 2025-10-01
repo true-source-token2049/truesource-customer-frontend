@@ -131,7 +131,7 @@ export default class TrueSourceAPI extends APISDK {
 
   static getAuthProduct = async (authcode: string, headers = {}) => {
     return this.getWithAuth(
-      `${this.API_BASE_URL}/user/verify/${authcode}`,
+      `${this.API_BASE_URL}/api/v1/user/verify/${authcode}`,
       headers,
       true
     );
