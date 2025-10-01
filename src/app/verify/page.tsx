@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 import ClaimButton from "@/components/verify/ClaimButton";
+import TrueSourceAPI from "@/lib/trueSourceApi";
 
 export default function ProductPage() {
   const product = {
