@@ -235,6 +235,7 @@ export default class TrueSourceAPI extends APISDK {
   /**
    * Upload product image
    */
+
   static uploadProductImage = async (
     productId: string,
     file: File[],
